@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './App.scss';
+import styles from './App.module.scss';
 
 const App = () => {
   // Create the count state.
@@ -12,7 +12,7 @@ const App = () => {
 
   // Return the App component.
   return (
-    <div className={'App'}>
+    <div className={styles.App}>
       <header className="App-header">
         <p>
           Page has been open for <code>{count}</code> seconds.
