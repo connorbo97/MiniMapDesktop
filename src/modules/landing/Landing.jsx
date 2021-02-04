@@ -12,7 +12,10 @@ const Landing = () => {
                 </div>
                 <div className={styles.form}>
                     <PathSvg className={styles.pathSvg} />
-                    <button>
+                    <button onClick={() => {
+                        location.hash='#CreateMap';
+                        location.search='?test=7';
+                    }}>
                         Create a map
                     </button>
                 </div>

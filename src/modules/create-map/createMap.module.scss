@@ -1,3 +1,8 @@
-.test {
-    color: red;
+@import '../common/common.module.scss';
+
+.container {
+    font-size: 20px;
+    background-color: $create-page-bg-color;
+    color: $create-page-color;
+    min-height: 100%;
 }

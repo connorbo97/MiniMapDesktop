@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Landing from './modules/landing';
 import CreateMap from './modules/create-map';
 import { Nav } from './modules/common';
