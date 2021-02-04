@@ -1,6 +1,5 @@
-@import '../../App.scss';
+@import '../common/nav/nav.module.scss';
 
-$nav-height: 90px;
 
 .container {
     padding: 0px 100px;
@@ -9,30 +8,6 @@ $nav-height: 90px;
     background-color: #f3f1ec;
     color: rgb(158, 39, 59);
     justify-content: center;
-}
-
-.logoContainer {
-    position: relative;
-    height: $nav-height;
-    width: 300px;
-}
-
-.nav {
-    position: absolute;
-    font-size: 30px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f3f1ec;
-    height: $nav-height;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #A40814;
-
-    a {
-        padding: 20px;
-    }
 }
 
 .main {
