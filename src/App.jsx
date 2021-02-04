@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Landing from './modules/landing';
+import { Nav } from './modules/common';
+import styles from './app.module.scss';
 import './App.scss';
 
 const App = () => {
-  // Create the count state.
-  const [count, setCount] = useState(0);
-  // Update the count (+1 every second).
-  useEffect(() => {
-    const timer = setTimeout(() => setCount(count + 1), 1000);
-    return () => clearTimeout(timer);
-  }, [count, setCount]);
-
-  // Return the App component.
   return (
-    <>
+    <div className={styles.navSpacer} >
+      <Nav page='Landing' />
       <Landing/>
-    </>
+    </div>
   );
 }
 

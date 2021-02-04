@@ -1,13 +1,14 @@
-@import '../common/nav/nav.module.scss';
-
+@import '../common/common.module.scss';
 
 .container {
     padding: 0px 100px;
-    margin-top: $nav-height;
     height: 100%;
-    background-color: #f3f1ec;
-    color: rgb(158, 39, 59);
+    background-color: $landing-page-bg-color;
     justify-content: center;
+
+    & .Landing {
+        color: green;
+    }
 }
 
 .main {

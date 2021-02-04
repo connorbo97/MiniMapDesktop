@@ -6,8 +6,6 @@ $global-font-size: 10px;
     @return #{$remSize}rem;
 }
 
-$value: calculateRem;
-
 html {
     font-size: $global-font-size;
     font-family: 'Helvetica', sans-serif;
