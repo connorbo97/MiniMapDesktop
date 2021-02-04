@@ -14,11 +14,9 @@ module.exports = {
     /* ... */
   },
   alias: {
+    "@experiments": "./src/experiments",
     "@base": "./src",
     "@utils": "./src/utils"
-  },
-  devOptions: {
-    /* ... */
   },
   buildOptions: {
     /* ... */

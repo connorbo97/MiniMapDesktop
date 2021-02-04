@@ -1,0 +1,108 @@
+$global-font-size: 10px;
+
+@function calculateRem($size) {
+    $remSize: $size / $global-font-size;
+    
+    @return #{$remSize}rem;
+}
+
+$value: calculateRem;
+
+html {
+    font-size: $global-font-size;
+    font-family: 'Helvetica', sans-serif;
+}
+
+path {
+    opacity: 0;
+}
+
+.svg-x {
+    animation: fadeIn 1s ease-in 2s forwards;
+}
+
+.svg-ball-1 {
+    animation: fadeIn 1s ease-in 0.1s forwards;
+}
+
+.svg-ball-2 {
+    opacity: 0;
+    animation: fadeIn 1s ease-in 0.2s forwards;
+}
+
+.svg-ball-3 {
+    animation: fadeIn 1s ease-in 0.3s forwards;
+}
+
+.svg-ball-4 {
+    animation: fadeIn 1s ease-in 0.4s forwards;
+}
+
+.svg-ball-5 {
+    animation: fadeIn 1s ease-in 0.5s forwards;
+}
+
+.svg-ball-7 {
+    animation: fadeIn 1s ease-in 0.6s forwards;
+}
+
+.svg-ball-8 {
+    animation: fadeIn 1s ease-in 0.7s forwards;
+}
+
+.svg-ball-9 {
+    animation: fadeIn 1s ease-in 0.8s forwards;
+}
+
+.svg-ball-10 {
+    animation: fadeIn 1s ease-in 0.9s forwards;
+}
+
+.svg-ball-11 {
+    animation: fadeIn 1s ease-in 1s forwards;
+}
+
+.svg-ball-12 {
+    animation: fadeIn 1s ease-in 1.1s forwards;
+}
+
+.svg-ball-13 {
+    animation: fadeIn 1s ease-in 1.2s forwards;
+}
+
+.svg-ball-14 {
+    animation: fadeIn 1s ease-in 1.3s forwards;
+}
+
+.svg-ball-15 {
+    animation: fadeIn 1s ease-in 1.4s forwards;
+}
+
+.svg-ball-16 {
+    animation: fadeIn 1s ease-in 1.5s forwards;
+}
+
+.svg-ball-17 {
+    animation: fadeIn 1s ease-in 1.6s forwards;
+}
+
+.svg-ball-18 {
+    animation: fadeIn 1s ease-in 1.7s forwards;
+}
+
+.svg-ball-19 {
+    animation: fadeIn 1s ease-in 1.8s forwards;
+}
+
+.svg-ball-20 {
+    animation: fadeIn 1s ease-in 1.9s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

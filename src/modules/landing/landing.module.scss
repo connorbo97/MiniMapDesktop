@@ -1,0 +1,80 @@
+@import '../../App.scss';
+
+$nav-height: 90px;
+
+.container {
+    padding: 0px 100px;
+    margin-top: $nav-height;
+    height: 100%;
+    background-color: #f3f1ec;
+    color: rgb(158, 39, 59);
+    justify-content: center;
+}
+
+.logoContainer {
+    position: relative;
+    height: $nav-height;
+    width: 300px;
+}
+
+.nav {
+    position: absolute;
+    font-size: 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f3f1ec;
+    height: $nav-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #A40814;
+
+    a {
+        padding: 20px;
+    }
+}
+
+.main {
+    display: flex;
+    position: relative;
+    flex-basis: 30%;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.imgContainer {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-height: 800px;
+
+    img {
+        width: 2000px;
+    }
+}
+
+.form {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    button {
+        z-index: 1;
+        // height: 50px;
+        font-size: 50px;
+        padding: 10px;
+    }
+}
+
+.pathSvg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    z-index: 0;
+}

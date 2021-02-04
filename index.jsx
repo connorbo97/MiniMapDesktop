@@ -1,11 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from './src';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import { App, reducers } from './src';
+
+const store = createStore(reducers)
 
 ReactDOM.render((
-    <App/>
+    <Provider store={store}>
+        <App/>
+    </Provider>
 ), document.getElementById('root'));
 
 if (import.meta.hot) {
-    import.meta.hot.accept();
+    import.meta.hot.accept()
 }
