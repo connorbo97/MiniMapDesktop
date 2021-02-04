@@ -6,16 +6,16 @@ const Nav = ({ page }) => {
     return (
         <div className={classBuilder(styles.nav, styles[page])} >
             <div>
-                <a>
+                <a href='?test=1#Landing'>
                     Home
                 </a>
-                <a>
+                <a href='?test=2#CreateMap'>
                     Create
                 </a>
-                <a>
+                <a href='?test=3#EditMap'>
                     Edit
                 </a>
-                <a>
+                <a href='?test=4#Account'>
                     Account
                 </a>
             </div>
