@@ -1,0 +1,35 @@
+.container {
+    position: relative;
+}
+
+.form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%) translateY(-100%);
+    background-color: #FFF;
+    border-radius: 5px;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: gray 3px 3px 3px;
+    color: black;
+
+    input {
+        border: 1px solid red;
+    }
+
+    .input {
+        border: 1px solid red;
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    button {
+        padding: 10px;
+    }
+}
