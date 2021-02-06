@@ -54,8 +54,6 @@ const AddCoordinates = ({ data, onSubmit }) => {
         setCanAddCoordinate(true);
     }
 
-    console.log(coordinates);
-
     return (
         <div className={styles.container}>
             <div className={styles.img}>
