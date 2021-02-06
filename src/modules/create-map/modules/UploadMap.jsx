@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import get from 'lodash.get';
 import styles from './uploadMap.module.scss';
 
 const UploadMap = ({ onSubmit }) => {
@@ -24,8 +23,10 @@ const UploadMap = ({ onSubmit }) => {
 
         const curFile = e.target.files[0];
 
-        setFile(curFile);
-        fr.readAsDataURL(curFile);
+        if (curFile) {
+            setFile(curFile);
+            fr.readAsDataURL(curFile);
+        }
     }, [handleFile])
     
     useEffect(() => {

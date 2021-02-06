@@ -1,35 +1,34 @@
-.container {
-    position: relative;
-}
-
 .form {
     position: absolute;
-    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    top: 50%;
     right: 0;
     transform: translateX(100%) translateY(-100%);
     background-color: #FFF;
     border-radius: 5px;
-    height: 200px;
     width: 200px;
     padding: 10px;
     border: 1px solid black;
     box-shadow: gray 3px 3px 3px;
     color: black;
 
-    input {
-        border: 1px solid red;
+    .inputs {
+        padding: 10px;
     }
 
     .input {
         border: 1px solid red;
+        margin-bottom: 5px;
     }
 }
 
 .buttons {
     display: flex;
     flex-direction: row;
-    flex: 1;
-    button {
+    > button {
         padding: 10px;
     }
 }

@@ -25,10 +25,21 @@ const CreateMap = () => {
             title: 'Add Coordinates',
             description: 'Mark at least 3 points on your map with accurate latitude and longitude',
             component: AddCoordinates,
+        },
+        {
+            title: 'test',
+            description: 'see console log for current data stored',
+            component: AddCoordinates,
         }
     ];
 
     console.log(data);
+
+
+    if (step >= steps.length) {
+        return 'done'
+    }
+
     
     return (
         <div className={styles['container']}>

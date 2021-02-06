@@ -1,13 +1,25 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { noop } from '@experiments/Toolbox';
+import { noop, isNil } from '@experiments/Toolbox';
 import CoordinateForm from './CoordinateForm';
 import styles from './addCoordinates.module.scss';
+
+const MAX_COORDS = 3;
 
 const AddCoordinates = ({ data, onSubmit }) => {
     const imgRef = useRef(null);
     const [canAddCoordinate, setCanAddCoordinate] = useState(true);
     const [coordinates, setCoordinates] = useState([]);
     const { file, fileUrl, x, y } = data;
+    const hasMaxCoords = coordinates.length === MAX_COORDS && coordinates.every(coord => (
+        !isNil(coord.x) && !isNil(coord.y) && !isNil(coord.lat) && !isNil(coord.lon)
+    ));
+
+    const goToNextStep = (e) => {
+        if (!hasMaxCoords) {
+            return;
+        }
+        onSubmit({ coordinates })
+    }
 
     const onMouseDown = e => {
         if (!canAddCoordinate) { return }
@@ -30,7 +42,7 @@ const AddCoordinates = ({ data, onSubmit }) => {
             return { ...coord, lon, lat }
         }))
 
-        if (coordinates.length === 3) {
+        if (coordinates.length === MAX_COORDS) {
             setCanAddCoordinate(false)
         } else {
             setCanAddCoordinate(true);
@@ -42,14 +54,21 @@ const AddCoordinates = ({ data, onSubmit }) => {
         setCanAddCoordinate(true);
     }
 
+    console.log(coordinates);
+
     return (
         <div className={styles.container}>
             <div className={styles.img}>
-                <img ref={imgRef} width='100%' src={fileUrl} onMouseDown={canAddCoordinate ? onMouseDown : noop} />
+                <button disabled={!hasMaxCoords} onClick={goToNextStep}>NEXT</button>
+                <img style={{
+                    cursor: hasMaxCoords ?
+                        'not-allowed' :
+                        (canAddCoordinate ? 'pointer' : 'default') 
+                }} ref={imgRef} width='100%' src={fileUrl} onMouseDown={canAddCoordinate ? onMouseDown : noop} />
                 {coordinates
                     .filter(c => c)
                     .map((coord, i) => (
-                        <CoordinateForm key={i} index={i} {...coord} updateCoordinate={updateCoordinate} cancelCoordinate={cancelCoordinate}/>
+                        <CoordinateForm key={i} index={i} {...coord} updateCoordinate={(lon, lat) =>updateCoordinate(i, lon, lat)} cancelCoordinate={cancelCoordinate}/>
                     )
                 )}
             </div>
