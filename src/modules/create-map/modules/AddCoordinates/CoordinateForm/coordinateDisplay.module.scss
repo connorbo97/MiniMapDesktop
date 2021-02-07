@@ -1,3 +1,9 @@
+.wrapper {
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+}
+
 .container {
     display: flex;
     position: relative;

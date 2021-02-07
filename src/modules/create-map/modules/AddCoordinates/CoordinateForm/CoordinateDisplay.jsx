@@ -7,16 +7,18 @@ const CoordinateDisplay = ({ lon, lat, hide, deleteCoord, minimizeCoord }) => {
     }
 
     return (
-        <div className={styles.container} onBlur={e => e.stopPropagation()}>
-            <div className={styles.buttons}>
-                <button onClick={minimizeCoord}>_</button>
-                <button onClick={deleteCoord}>X</button>
-            </div>
-            <div>
-                Longitude: {lon}
-            </div>
-            <div>
-                Latitude: {lat}
+        <div className={styles.wrapper} onBlur={e => e.stopPropagation()}>
+            <div className={styles.container} onBlur={e => e.stopPropagation()}>
+                <div className={styles.buttons}>
+                    <button onClick={minimizeCoord}>_</button>
+                    <button onClick={deleteCoord}>X</button>
+                </div>
+                <div>
+                    Longitude: {lon}
+                </div>
+                <div>
+                    Latitude: {lat}
+                </div>
             </div>
         </div>
     );
