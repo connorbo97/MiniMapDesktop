@@ -25,7 +25,7 @@ const CoordinateForm = ({ x, y, lat: dataLat, lon: dataLon, updateCoordinate, ca
     return (
         <div style={{
             position: 'absolute',
-            transform: 'translateY(-75%) translateX(-50%)',
+            transform: 'translateY(-100%) translateX(-50%)',
             top: y+'px',
             left: x+'px'
         }}>
@@ -49,7 +49,7 @@ const CoordinateForm = ({ x, y, lat: dataLat, lon: dataLon, updateCoordinate, ca
                         lat={lat}
                     />
                 )}
-                <img style={{ cursor: open ? 'default' : 'pointer' }} onClick={() => setOpen(true)} src={Marker} width={'100px'} />
+                <img style={{ cursor: open ? 'default' : 'pointer' }} onClick={() => setOpen(true)} src={Marker} width={'100%'} />
             </div>
         </div>
     );

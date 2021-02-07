@@ -56,8 +56,8 @@ const AddCoordinates = ({ data, onSubmit }) => {
 
     return (
         <div className={styles.container}>
+            <button disabled={!hasMaxCoords} onClick={goToNextStep}>NEXT</button>
             <div className={styles.img}>
-                <button disabled={!hasMaxCoords} onClick={goToNextStep}>NEXT</button>
                 <img style={{
                     cursor: hasMaxCoords ?
                         'not-allowed' :
